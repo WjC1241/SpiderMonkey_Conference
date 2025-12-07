@@ -1,4 +1,4 @@
-# Agent-Based Model to study the 
+#  Agent-Based Model for Population Dynamics of spider monkeys
 
 This repository contains the source code for an agent-based model studying the effects of forest deforestation on brown-headed spider monkey populations. This repository contains the interactive version of the project produced to be presented in conferences.
 
