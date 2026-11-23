@@ -433,7 +433,7 @@ function run_multiple_territories(n_territories::Int, grid_layout::Tuple{Int, In
         add_colorbar = true,
         mdata = mdata,
         mlabels = ["Female monkeys", "Male Monkeys", "Alive Monkeys", "Dead Monkey by Starvation"],
-        controls = true
+        add_controls = true
     )
 
     return fig, model  # Return the final model state with data collected
@@ -458,11 +458,11 @@ function record_monkey_simulation!(model::ABM; filename="monkeys_simulation.mp4"
 end
 
 # Extraer solo el modelo de la tupla que devuelve `run_multiple_territories`
-fig, model = run_multiple_territories(2, (1, 2), steps=360, n_monkeys_per_territory=25, patch_dim=3.7, tot_dim=2000, seed=23180)
+fig, model = run_multiple_territories(2, (1, 2), steps=30, n_monkeys_per_territory=25, patch_dim=3.7, tot_dim=2000, seed=23180)
 
 # Ejecutar la simulación y guardar el video
-record_monkey_simulation!(model, filename="monkeys_simulation.mp4", steps=360, fps=10)
+# record_monkey_simulation!(model, filename="monkeys_simulation.mp4", steps=30, fps=10)
 
 # Run the simulation
-#fig, model = run_multiple_territories(2, (1, 2), steps=36, n_monkeys_per_territory=25, patch_dim=3.7, tot_dim=2000, seed=23180)
-#display(fig)
+fig, model = run_multiple_territories(2, (1, 2), steps=36, n_monkeys_per_territory=25, patch_dim=3.7, tot_dim=2000, seed=23180)
+display(fig)
